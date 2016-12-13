@@ -20,6 +20,11 @@ allFalse determines whether every elementof a list of Booleans is false
 exercise 1.3
 ============
 
+member determines whether a specified element is contained in a given list
+
+> member :: (Eq a) => a -> [a] -> Bool
+> member a as = foldr (\x y -> x == a || y) False as
+
 exercise 1.4
 ============
 
