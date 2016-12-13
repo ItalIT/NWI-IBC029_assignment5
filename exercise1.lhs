@@ -31,12 +31,7 @@ exercise 1.4
 smallest calculates the smallest value in a list of integers
 
 > smallest :: [Int] -> Int
-> smallest = foldr (retIntSmall) maxBound
-
-> retIntSmall :: Int -> Int -> Int
-> retIntSmall l r
->     | l <= r = l
->     | otherwise = r
+> smallest = foldr min maxBound
 
 exercise 1.5
 ============
