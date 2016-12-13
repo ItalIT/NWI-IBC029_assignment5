@@ -15,5 +15,11 @@ author: Jasper Haasdijk s4449754
 exercise 2.1
 ============
 
+> msdf :: Base -> [Digit] -> Integer
+> msdf base = foldl (\offset value -> offset * base + value) 0
+
+> lsdf :: Base -> [Digit] -> Integer
+> lsdf base = foldr (\offset value -> value * base + offset) 0
+
 exercise 2.2
 ============
