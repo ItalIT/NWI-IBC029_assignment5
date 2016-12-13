@@ -39,9 +39,4 @@ exercise 1.5
 largest calculates the largest value in a list of integers
 
 > largest :: [Int] -> Int
-> largest = foldr (retIntLarge) minBound
-
-> retIntLarge :: Int -> Int -> Int
-> retIntLarge l r
->     | l >= r = l
->     | otherwise = r
+> largest = foldr max minBound
