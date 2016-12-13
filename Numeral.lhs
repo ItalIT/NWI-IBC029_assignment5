@@ -23,3 +23,11 @@ exercise 2.1
 
 exercise 2.2
 ============
+
+We can define lsdf and msdf using another, such as:
+lsdf = msdf where the list is reversed
+msdf = lsdf where the list is reversed
+
+This is basically what the definition of foldr and foldl is. With foldr we build
+the list from the rightmost element and with foldl we build the list from the 
+leftmost element.
