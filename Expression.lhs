@@ -44,5 +44,10 @@ author: Jasper Haasdijk s4449754
 exercise 3.1
 ============
 
+The difference between the grammar in the slides and the grammar shown in this 
+exercise is that the grammar shown in this exercise is ambiguous. The expression
+4*71+1 can be evaluated in two ways. Either 4 * (71 + 1) or (4 * 71) + 1. The 
+grammer from the exercise does not indicate which one is being evaluated.
+
 exercise 3.2
 ============
