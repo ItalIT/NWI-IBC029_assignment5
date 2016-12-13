@@ -28,5 +28,15 @@ member determines whether a specified element is contained in a given list
 exercise 1.4
 ============
 
+smallest calculates the smallest value in a list of integers
+
+> smallest :: [Int] -> Int
+> smallest = foldr (retInt) maxBound
+
+> retInt :: Int -> Int -> Int
+> retInt l r
+>     | l <= r = l
+>     | otherwise = r
+
 exercise 1.5
 ============
