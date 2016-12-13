@@ -11,10 +11,9 @@
 > O ∧ _b  =  O
 > I ∧ b   =  b
 
-> infixr 2 ∨
-> (∨) ∷ Bit → Bit → Bit
-> O ∨ b   =  b
-> I ∨ _b  =  I
+> happyOr ∷ Bit → Bit → Bit
+> O `happyOr` b   =  b
+> I `happyOr` _b  =  I
 
 > infixr 4 ⊕
 > (⊕) ∷ Bit → Bit → Bit
@@ -46,3 +45,19 @@ exercise 6.1
 
 exercise 6.2
 ============
+
+> halfAdder ∷ (Bit, Bit) → (Bit, Carry)
+> halfAdder (O, O) = (O, O)
+> halfAdder (O, I) = (I, O)
+> halfAdder (I, O) = (I, O)
+> halfAdder (I, I) = (O, I)
+
+> fullAdder ∷ ((Bit, Bit), Carry) → (Bit, Carry)
+> fullAdder ((a, b), c) = (fst loHA2, (snd loHA2) `happyOr` (snd loHA1))
+>                       where loHA1 = halfAdder(a, b)
+>                             loHA2 = halfAdder(fst loHA1, c)
+
+> rippleAdder :: ([(Bit, Bit)], Carry) -> ([Bit], Carry)
+> rippleAdder = mapr fullAdder
+
+Example use of this function is: "rippleAdder ([(O, I), (I, O)], I)"
