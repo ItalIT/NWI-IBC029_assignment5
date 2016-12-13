@@ -37,5 +37,12 @@ author: Jasper Haasdijk s4449754
 exercise 6.1
 ============
 
+> mapr :: ((a, state) -> (b, state)) -> (([a], state) -> ([b], state))
+> mapr f ([], s) = ([], s)
+> mapr f (xs, y) = (new_a : (fst rem), (snd rem))
+>                where a:as = reverse xs
+>                      (new_a, new_state) = f (a, y)
+>                      rem = mapr f (as, new_state)
+
 exercise 6.2
 ============
