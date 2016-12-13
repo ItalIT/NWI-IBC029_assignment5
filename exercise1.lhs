@@ -4,6 +4,11 @@ author: Jasper Haasdijk s4449754
 exercise 1.1
 ============
 
+allTrue determines whether every element of a list of Booleans is true
+
+> allTrue :: [Bool] -> Bool
+> allTrue = foldr (&&) True
+
 exercise 1.2
 ============
 
