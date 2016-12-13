@@ -51,3 +51,5 @@ grammer from the exercise does not indicate which one is being evaluated.
 
 exercise 3.2
 ============
+
+-- werkcollege gaf aan "sla maar even over"
