@@ -12,6 +12,11 @@ allTrue determines whether every element of a list of Booleans is true
 exercise 1.2
 ============
 
+allFalse determines whether every elementof a list of Booleans is false
+
+> allFalse :: [Bool] -> Bool
+> allFalse = allTrue . map not
+
 exercise 1.3
 ============
 
